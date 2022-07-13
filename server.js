@@ -35,7 +35,7 @@ server.on("request", function (request, response) {
 
   //di sini tambahkan http headers. Apa itu http headers? Akan dibahas nanti
   response.writeHead(200, {
-    "content-type": "text/plain",
+    "content-type": "text/html",
     "content-length": profile.length,
   });
 
