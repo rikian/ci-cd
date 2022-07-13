@@ -42,8 +42,6 @@ server.on("request", function (request, response) {
   response.end(profile);
 });
 
-server.on("error", (error) => console.log(error));
-
 function htmlTemplate(nameWeb, nama, bidang, image) {
   const template = `
       <html>
