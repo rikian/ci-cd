@@ -1,16 +1,13 @@
 const { createServer } = require("http");
 const { readFile } = require("fs");
 const server = createServer();
-server.listen(9001, "0.0.0.0");
+server.listen(8080, "0.0.0.0");
 
-server.on("listening", () => console.log("Server running on port 9091..."));
+server.on("listening", () => console.log("server listening on port 8080"));
+
 server.on("request", function (request, response) {
-  //untuk menampilkan request URL yang masuk ke server
-  //   console.log(request.url);
-  //kita akan handle ini nanti
   if (request.url.match("favicon")) return response.end("oke");
   if (request.url.match("/profile.svg")) {
-    //parameter pertama lokasi file, callback
     return readFile("./profile.svg", (err, file) => {
       //jika error
       if (err) {
@@ -35,9 +32,10 @@ server.on("request", function (request, response) {
     "Web Developer",
     "profile.svg"
   );
+
   //di sini tambahkan http headers. Apa itu http headers? Akan dibahas nanti
   response.writeHead(200, {
-    "content-type": "text/html",
+    "content-type": "text/plain",
     "content-length": profile.length,
   });
 
@@ -89,3 +87,5 @@ function htmlTemplate(nameWeb, nama, bidang, image) {
 
   return template;
 }
+
+module.exports = { server };
