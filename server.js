@@ -7,7 +7,7 @@ server.on("listening", () => console.log("server listening on port 8080"));
 
 server.on("request", function (request, response) {
   if (request.url.match("favicon")) return response.end("oke");
-  if (request.url.match("/profile.svg")) {
+  if (request.url.match("/test/profile.svg")) {
     return readFile("./profile.svg", (err, file) => {
       //jika error
       if (err) {
@@ -30,7 +30,7 @@ server.on("request", function (request, response) {
     "lawnsoor.com",
     "Rikian Faisal",
     "Web Developer",
-    "profile.svg"
+    "/test/profile.svg"
   );
 
   //di sini tambahkan http headers. Apa itu http headers? Akan dibahas nanti
