@@ -28,7 +28,7 @@ server.on("request", function (request, response) {
   //isi sesuai data yang diinginkan
   const profile = htmlTemplate(
     "lawnsoor.com",
-    "Rikian",
+    "Riki",
     "Web Developer",
     "/test/profile.svg"
   );
