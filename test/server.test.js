@@ -9,6 +9,6 @@ test("respon status code 200", async () => {
   };
   expect(result).toEqual({
     code: 200,
-    "content-type": "text",
+    "content-type": "text/html",
   });
 });

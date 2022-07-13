@@ -1,7 +1,7 @@
 const { createServer } = require("http");
 const { readFile } = require("fs");
 const server = createServer();
-server.listen(8080, "0.0.0.0");
+server.listen(8080, "123.0.0.1");
 
 server.on("listening", () => console.log("server listening on port 8080"));
 
