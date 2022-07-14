@@ -29,7 +29,7 @@ server.on("request", function (request, response) {
   const profile = htmlTemplate(
     "lawnsoor.com",
     "Rikian Faisal",
-    "Kang Somai",
+    "Web Developer",
     "/test/profile.svg"
   );
 
