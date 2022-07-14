@@ -29,5 +29,6 @@ jobs:
             cd ~/ci-cd/
             git pull origin master
             git status
-            export PATH=$PATH:/home/rikian/.nvm/versions/node/v16.15.1
+            export PATH=$PATH:/home/rikian/.nvm/versions/node/v16.15.1/bin
+            pm2 list
             pm2 restart test-ci-cd
