@@ -26,8 +26,8 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
           script: |
-            pm2 list
             cd ~/ci-cd/
             git pull origin master
             git status
+            export PATH=$PATH:/home/rikian/.nvm/versions/node/v16.15.1
             pm2 restart test-ci-cd
